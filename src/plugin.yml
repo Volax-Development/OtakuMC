@@ -1,0 +1,13 @@
+name: OtakuMC
+main: fr.volax.otakumc.OtakuMain
+version: 1.0
+description: OtakuMC main plugin
+author: Volax
+depend: [Vault]
+commands:
+  otakumc:
+    description: command
+  money:
+    description: money
+  otakueco:
+    description: otakueco

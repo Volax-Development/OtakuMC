@@ -1,0 +1,15 @@
+permissions:
+  grenades-use: "otakumc.grenades.use"
+  grenades-give: "otakumc.grenades.give"
+
+inventories:
+  give-grenades: "&cOtakuMC - Give Grenade"
+
+items:
+  level:
+    grenade-level-1: 2
+    grenade-level-2: 5
+    grenade-level-3: 10
+  grenade-level-1: "&a&lGrenade Niveau 1"
+  grenade-level-2: "&a&lGrenade Niveau 2"
+  grenade-level-3: "&a&lGrenade Niveau 3"
