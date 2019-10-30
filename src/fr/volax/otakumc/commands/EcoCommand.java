@@ -35,6 +35,14 @@ public class EcoCommand implements CommandExecutor {
             }else if(args[0].equalsIgnoreCase("take")){
                 if(target == null){ sender.sendMessage(OtakuMain.prefix + "§cCe joueur n'existe pas !"); return false; }
                 if(!OtakuMain.getInstance().isInt(args[2])){  sender.sendMessage(OtakuMain.prefix + "§cVeillez fournir un nombre valide !"); return false; }
+                int money = Integer.parseInt(args[2]);
+                if(money >= OtakuMain.economy.getBalance(target)){
+                    sender.sendMessage(OtakuMain.prefix + "§cLe joueur n'a pas assez d'argent !");
+                }else{
+                    OtakuMain.economy.withdrawPlayer(target, money);
+                    target.sendMessage(OtakuMain.prefix + "§a" + money + "$ ont été retirés à votre compte !");
+                    sender.sendMessage(OtakuMain.prefix + "§a" + money + "$ ont été retirés de " + target.getName() +". Nouveau solde: " + OtakuMain.economy.getBalance(target) + "$");
+                }
 
                 return false;
             }else{
